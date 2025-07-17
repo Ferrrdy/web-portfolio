@@ -7,7 +7,7 @@ const Tentang = () => {
       {/* About me */}
       <div className="py-16 px-6 sm:px-10 md:px-20 max-w-6xl mx-auto">
         <h2 className="text-5xl sm:text-5xl font-bold mb-6">About me</h2>
-        <FadeInOnScroll className="text-base sm:text-lg leading-relaxed text-justify">
+        <FadeInOnScroll className="text-base sm:text-lg leading-relaxed">
           Hi, saya Ferdy. Sebagai Full Stack Web Developer dan Designer, saya percaya bahwa desain dan fungsionalitas harus berjalan beriringan. Setiap proyek yang saya kerjakan dirancang agar tidak hanya menarik secara visual, tetapi juga memberikan pengalaman pengguna yang intuitif dan efisien. Saya senang memecahkan masalah, menjelajahi teknologi baru, dan menciptakan solusi digital yang berdampak nyata bagi pengguna maupun bisnis. Dalam proses kerja, saya selalu mengutamakan detail, kolaborasi yang baik, serta kemauan untuk terus belajar agar setiap hasil yang saya bangun mampu menjawab kebutuhan pengguna secara tepat dan inovatif.
         </FadeInOnScroll>
       </div>  
