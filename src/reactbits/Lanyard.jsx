@@ -22,7 +22,7 @@ export default function Lanyard({
   transparent = true,
 }) {
   return (
-    <div className="relative z-0 w-full h-screen touch-none">
+    <div className="relative z-0 w-full h-full touch-none">
       <Canvas
         camera={{ position, fov }}
         gl={{ alpha: transparent }}

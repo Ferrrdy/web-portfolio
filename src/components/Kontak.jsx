@@ -102,10 +102,10 @@ export default function Kontak() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Lanyard dalam 'Card' */}
-          <div className="-mt-55 w-auto flex justify-center items-center">
-             <div className="w-full max-w-sm">
-                <Lanyard />
-             </div>
+          <div className="-mt-51 sm:-mt-51 md:-mt-51 lg:-mt-64 w-auto flex justify-center items-center">
+            <div className="w-60 max-w-sm h-200">
+              <Lanyard />
+            </div>
           </div>
 
           {/* Formulir dalam 'Card' */}
