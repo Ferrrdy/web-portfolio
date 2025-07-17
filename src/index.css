@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer base {
+  body{
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* Styling untuk container tombol navigasi Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang putih semi-transparan */
+  border-radius: 50%; /* Membuatnya menjadi lingkaran */
+  width: 50px;       /* Lebar tombol */
+  height: 50px;      /* Tinggi tombol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  transition: background-color 0.3s ease; /* Transisi saat hover */
+}
+
+/* Mengubah warna panah di dalamnya */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #111827;  /* Warna panah (hitam) */
+  font-size: 18px; /* Ukuran panah */
+  font-weight: 800;
+}
+
+/* Efek saat mouse diarahkan ke tombol */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #ffffff; /* Latar belakang menjadi putih solid */
+}
+
+/* Penyesuaian posisi horizontal tombol */
+.swiper-button-prev {
+  left: 20px; /* Jarak dari kiri */
+}
+
+.swiper-button-next {
+  right: 20px; /* Jarak dari kanan */
+}
