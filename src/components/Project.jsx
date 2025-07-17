@@ -1,14 +1,8 @@
-// Import modul yang diperlukan, termasuk EffectCoverflow
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Hapus 'Navigation' dari import di bawah ini
 import { Pagination, A11y, EffectCoverflow } from 'swiper/modules';
-
-// Import semua CSS yang dibutuhkan
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-
-// Impor data proyek Anda
 import { projects } from '../data/data';
 
 const Project = () => {
@@ -119,7 +113,7 @@ const Project = () => {
                       rel="noopener noreferrer"
                       className="inline-block w-full text-center bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-300 transition-colors"
                     >
-                      GitHub
+                      Detail
                     </a>
                   </div>
                 </div>

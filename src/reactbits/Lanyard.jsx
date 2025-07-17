@@ -8,7 +8,7 @@ import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphe
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 import * as THREE from 'three';
 
-// Import model dan tekstur
+// Import model dan tekstur dari folder /public
 import cardGLB from "/lanyard/card.glb";
 import lanyardTexture from "/lanyard/lanyard.png";
 
@@ -22,7 +22,7 @@ export default function Lanyard({
   transparent = true,
 }) {
   return (
-    <div className="relative z-0 w-full h-screen flex justify-center items-center">
+    <div className="relative z-0 w-full h-screen touch-none">
       <Canvas
         camera={{ position, fov }}
         gl={{ alpha: transparent }}
@@ -55,25 +55,21 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
 
   const [curve] = useState(() =>
     new THREE.CatmullRomCurve3([
-      new THREE.Vector3(),
-      new THREE.Vector3(),
-      new THREE.Vector3(),
-      new THREE.Vector3(),
+      new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(),
     ])
   );
 
   const [dragged, drag] = useState(false);
-  const [hovered, hover] = useState(false);
   const [isSmall, setIsSmall] = useState(() =>
     typeof window !== 'undefined' && window.innerWidth < 1024
   );
 
   useEffect(() => {
-    if (hovered) {
-      document.body.style.cursor = dragged ? 'grabbing' : 'grab';
+    if (dragged) {
+      document.body.style.cursor = 'grabbing';
       return () => void (document.body.style.cursor = 'auto');
     }
-  }, [hovered, dragged]);
+  }, [dragged]);
 
   useEffect(() => {
     const handleResize = () => setIsSmall(window.innerWidth < 1024);
@@ -117,7 +113,6 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
       curve.points[1].copy(j2.current.lerped);
       curve.points[2].copy(j1.current.lerped);
       curve.points[3].copy(fixed.current.translation());
-
       band.current.geometry.setPoints(curve.getPoints(32));
 
       ang.copy(card.current.angvel());
@@ -156,13 +151,14 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
           <group
             scale={2.25}
             position={[0, -1.2, -0.05]}
-            onPointerOver={() => hover(true)}
-            onPointerOut={() => hover(false)}
             onPointerUp={(e) => {
-              e.target.releasePointerCapture(e.pointerId);
+              if (dragged) {
+                e.target.releasePointerCapture(e.pointerId);
+              }
               drag(false);
             }}
             onPointerDown={(e) => {
+              e.stopPropagation();
               e.target.setPointerCapture(e.pointerId);
               drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())));
             }}
@@ -183,7 +179,6 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
         </RigidBody>
       </group>
 
-      {/* Tali lanyard */}
       <mesh ref={band}>
         <meshLineGeometry />
         <meshLineMaterial
