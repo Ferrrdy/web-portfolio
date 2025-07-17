@@ -103,7 +103,7 @@ export default function Kontak() {
           
           {/* Lanyard dalam 'Card' */}
           <div className="-mt-51 sm:-mt-51 md:-mt-51 lg:-mt-64 w-auto flex justify-center items-center">
-            <div className="w-60 max-w-sm h-200">
+            <div className="w-40 max-w-sm h-200">
               <Lanyard />
             </div>
           </div>
