@@ -1,4 +1,3 @@
-import { div } from 'framer-motion/client';
 import { listTools } from '../data/data';
 import FadeInOnScroll from '../reactbits/FadeInOnScroll';
 
@@ -8,27 +7,34 @@ const Tentang = () => {
       {/* About me */}
       <div className="py-16 px-6 sm:px-10 md:px-20 max-w-6xl mx-auto">
         <h2 className="text-5xl sm:text-5xl font-bold mb-6">About me</h2>
-        <FadeInOnScroll className="text-base sm:text-lg leading-relaxed">
-          Halo! Saya mahasiswa semester 5 program studi Informatika yang sedang fokus menekuni dunia Web Development, terutama di bidang Front-End. Saya tertarik menciptakan antarmuka yang tidak hanya berfungsi dengan baik, tetapi juga memberikan pengalaman yang menyenangkan dan intuitif bagi pengguna. Minat saya dimulai dari keingintahuan tentang bagaimana sebuah halaman web bisa terlihat menarik dan sekaligus fungsional. Dari situlah saya mulai mendalami HTML, CSS, dan JavaScript, hingga akhirnya jatuh hati pada teknologi seperti React, Tailwind CSS, dan berbagai framework modern lainnya. Bagi saya, belajar adalah proses yang tidak pernah berhenti. Saya senang mencoba hal-hal baru, baik dalam hal desain, animasi, maupun interaksi pengguna. Saya juga aktif membangun proyek pribadi untuk terus melatih kemampuan serta memperluas portofolio saya. Saat ini, saya sedang memperdalam pemahaman saya tentang pengembangan web yang efisien, responsive design, serta prinsip UI/UX. Ke depannya, saya berharap bisa berkontribusi dalam tim pengembangan produk digital yang berdampak dan terus bertumbuh sebagai seorang Front-End Developer yang profesional.
+        <FadeInOnScroll className="text-base sm:text-lg leading-relaxed text-justify">
+          Hi, saya Ferdy. Sebagai Full Stack Web Developer dan Designer, saya percaya bahwa desain dan fungsionalitas harus berjalan beriringan. Setiap proyek yang saya kerjakan dirancang agar tidak hanya menarik secara visual, tetapi juga memberikan pengalaman pengguna yang intuitif dan efisien. Saya senang memecahkan masalah, menjelajahi teknologi baru, dan menciptakan solusi digital yang berdampak nyata bagi pengguna maupun bisnis. Dalam proses kerja, saya selalu mengutamakan detail, kolaborasi yang baik, serta kemauan untuk terus belajar agar setiap hasil yang saya bangun mampu menjawab kebutuhan pengguna secara tepat dan inovatif.
         </FadeInOnScroll>
       </div>  
 
       {/* Tools */}
       <div className="py-5 px-6 sm:px-10 md:px-20 max-w-6xl mx-auto">
-        <h2 className="text-5xl sm:text-5xl font-bold text-white mb-6">
+        <h2 className="text-5xl sm:text-5xl font-bold text-white mb-10">
           Teknologi & Tools
         </h2>
 
-        <div className="flex flex-wrap gap-3">
-          {listTools.map((tool, index) => (
-            <span
-              key={index}
-              className="bg-violet-900 text-white text-sm font-medium px-3 py-1 rounded-2xl shadow-sm"
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {listTools.map((tool) => (
+            <div
+              key={tool.id}
+              className="group flex flex-col items-center text-center p-4 bg-zinc-800 rounded-lg border border-transparent hover:border-violet-500 hover:-translate-y-1 transition-all duration-300"
             >
-              {tool.nama}
-            </span>
+              <img
+                src={tool.gambar}
+                alt={tool.nama}
+                className="w-16 h-16 mb-4 transition-transform duration-300 group-hover:scale-110"
+              />
+              <h4 className="font-semibold text-white">{tool.nama}</h4>
+              <p className="text-sm text-zinc-400">{tool.ket}</p>
+            </div>
           ))}
         </div>
+
       </div>
     </div>
   );
