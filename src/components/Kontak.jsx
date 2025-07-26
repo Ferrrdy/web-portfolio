@@ -2,10 +2,8 @@
 
 import { useState } from 'react';
 import Lanyard from '../reactbits/Lanyard';
-import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'; // Import ikon
+import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 
-// KOMPONEN REUSABLE untuk Input Form
-// Ini membuat form utama lebih bersih dan mudah dibaca.
 const FormField = ({ id, label, type = 'text', name, value, onChange, placeholder, required, disabled, rows }) => {
   const inputClasses = "w-full px-4 py-3 text-sm bg-slate-50 rounded-lg border border-gray-300 focus:ring-1 focus:ring-black focus:border-black transition-shadow duration-200";
   
@@ -43,7 +41,6 @@ const FormField = ({ id, label, type = 'text', name, value, onChange, placeholde
   );
 };
 
-// KOMPONEN UTAMA
 export default function Kontak() {
   const [formData, setFormData] = useState({
     email: '',
@@ -54,7 +51,7 @@ export default function Kontak() {
   const [formStatus, setFormStatus] = useState({
     isSubmitting: false,
     message: '',
-    type: 'neutral', // 'neutral', 'success', 'error'
+    type: 'neutral',
   });
 
   const handleChange = (e) => {
@@ -89,7 +86,6 @@ export default function Kontak() {
     }
   };
 
-  // Objek untuk styling pesan status berdasarkan tipenya
   const statusStyles = {
     success: 'text-green-600',
     error: 'text-red-600',

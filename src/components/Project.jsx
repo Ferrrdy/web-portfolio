@@ -40,7 +40,6 @@ const Project = () => {
           centeredSlides={true}
           grabCursor={true}
           
-          // --- PENGATURAN RESPONSIVE ---
           breakpoints={{
             // Untuk layar mobile (default)
             320: {
@@ -69,7 +68,7 @@ const Project = () => {
             // Untuk layar desktop
             1024: {
               slidesPerView: 3,
-              spaceBetween: 20, // Kurangi spaceBetween agar lebih pas
+              spaceBetween: 20, 
               coverflowEffect: {
                   rotate: 25,
                   stretch: 0,

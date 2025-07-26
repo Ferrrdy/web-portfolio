@@ -8,7 +8,7 @@ const Tentang = () => {
       <div className="py-16 px-6 sm:px-10 md:px-20 max-w-6xl mx-auto">
         <h2 className="text-5xl sm:text-5xl font-bold mb-6">About me</h2>
         <FadeInOnScroll className="text-base sm:text-lg leading-relaxed">
-          Hi, saya Ferdy. Sebagai Full Stack Web Developer dan Designer, saya percaya bahwa desain dan fungsionalitas harus berjalan beriringan. Setiap proyek yang saya kerjakan dirancang agar tidak hanya menarik secara visual, tetapi juga memberikan pengalaman pengguna yang intuitif dan efisien. Saya senang memecahkan masalah, menjelajahi teknologi baru, dan menciptakan solusi digital yang berdampak nyata bagi pengguna maupun bisnis. Dalam proses kerja, saya selalu mengutamakan detail, kolaborasi yang baik, serta kemauan untuk terus belajar agar setiap hasil yang saya bangun mampu menjawab kebutuhan pengguna secara tepat dan inovatif.
+          Hi, saya Ferdy. Sebagai Frontend Web Developer, saya berkomitmen untuk menciptakan antarmuka yang tidak hanya menarik secara visual, tetapi juga responsif, intuitif, dan ramah pengguna. Saya percaya bahwa desain yang baik harus berjalan seiring dengan performa dan aksesibilitas. Dengan keahlian dalam HTML, CSS, JavaScript, dan framework modern seperti React, saya senang mengubah ide menjadi tampilan digital yang fungsional dan interaktif. Saya selalu terbuka terhadap feedback, senang berkolaborasi dalam tim lintas disiplin, dan terus belajar untuk mengikuti perkembangan teknologi frontend. Bagi saya, setiap baris kode adalah peluang untuk menciptakan pengalaman pengguna yang lebih baik dan bermakna.
         </FadeInOnScroll>
       </div>  
 

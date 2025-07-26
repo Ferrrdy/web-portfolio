@@ -6,7 +6,6 @@ const Home = () => {
   const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
-    // Tunggu 100ms untuk memastikan browser sudah render DOM
     const timer = setTimeout(() => {
       setRefreshKey(Date.now());
     }, 100);
@@ -20,7 +19,7 @@ const Home = () => {
         <div className="text-center space-y-2">
           <h2 className="text-7xl sm:text-7xl md:text-7xl lg:text-8xl font-bold">
             <DecryptedText
-              key={`ferdy-${refreshKey}`} // Key penting untuk trigger ulang
+              key={`ferdy-${refreshKey}`}
               text="FERDY"
               animateOn="view"
               revealDirection="center"
