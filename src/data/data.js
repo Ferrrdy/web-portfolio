@@ -96,7 +96,7 @@ export const projects = [
     deskripsi: "KarirKu adalah platform karir yang dirancang khusus untuk generasi muda. Pengguna dapat membuat profil profesional, menampilkan pengalaman dan keterampilan, serta mencari lowongan kerja atau magang yang sesuai dengan minat mereka.",
     gambar: Proyek2,
     linkGithub: "https://www.figma.com/design/nYG9G1r00qC6NzT33y6O7B/KarirKu-Prototype-Design?node-id=0-1&t=mYkUPlXJ10IkYhJC-1",
-    teknologi: ["Figma, Desain, UI/UX, Color Hunt"],
+    teknologi: ["Figma", "Desain", "UI/UX", "Color Hunt"],
   },
   {
     id: 3,
